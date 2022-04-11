@@ -21,10 +21,10 @@ export class ProductService {
   // eslint-disable-next-line
   constructor() {}
   getAll(): Promise<ResponseProducts> {
-    return GetAPI(API_PRODUCTS);
+    return GetAPI(`${API_PRODUCTS}?populate=image`);
   }
   show(id: Product['id']): Promise<ResponseProduct> {
-    return GetAPI(`${API_PRODUCTS}/${id}`);
+    return GetAPI(`${API_PRODUCTS}/${id}?populate=image`);
   }
   async add(product: ProductCreationAttributes): Promise<ResponseProduct> {
     const data = await PostAPI(API_PRODUCTS, { data: product } );

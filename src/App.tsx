@@ -31,7 +31,7 @@ axios.interceptors.request.use(async (configAxios) => {
     headers: {
       ...configAxios.headers,
       Accept: 'application/json',
-      Authorization,
+      // Authorization, // FIXME: Validation when the token is expired 
     },
     validateStatus: (status: number) => status >= 200 && status <= 550,
   };

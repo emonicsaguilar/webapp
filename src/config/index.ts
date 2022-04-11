@@ -24,7 +24,7 @@ export const API_AUTH_SEND_CODE_PHONE = '/auth/send-code-phone/:phoneNumber';
 export const API_AUTH_CONFIRM_PHONE = '/auth/confirm-phone';
 export const API_USERS = '/users';
 export const API_PAYMENT_METHODS = '/payment-methods';
-export const API_PRODUCTS = '/products?populate=image';
+export const API_PRODUCTS = '/products';
 export const API_ORDERS = '/orders';
 export const API_SHOW_PAYMENT_METHOD = '/payment-methods/:id';
 

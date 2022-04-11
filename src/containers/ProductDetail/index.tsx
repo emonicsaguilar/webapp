@@ -11,6 +11,7 @@ const productService = new ProductService();
 export const ProductDetail = (): JSX.Element => {
   const {id = ''} = useParams();
   const [product, setProduct] = useState<Product | null>(null);
+  console.log("🚀 ~ file: index.tsx ~ line 25 ~ product", JSON.stringify(product))
   useEffect(() => {
     productService.show(Number(id)).then((response) => setProduct(response.data));
   },[id, setProduct]);
